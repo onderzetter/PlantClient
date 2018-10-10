@@ -2,8 +2,8 @@
 
 var mqtt = require('mqtt')
 var pumps = require('./pumps.js');
-var server = 'mqtt://192.168.1.9'
-var clientid = 'sol';
+var server = 'mqtt://192.168.1.9' //Need to make this configurable
+var clientid = 'sol'; //Need to make this configurable
 var topicroot = clientid+'/';
 var ListenTopics = [topicroot+'system', topicroot+'plant',topicroot+'test',topicroot+'exit',topicroot+'start',topicroot+'stop']
 var AnswerTopics = [topicroot+'',]
@@ -23,11 +23,6 @@ LogcurrentDate();
 
 
 pumps.data.Init(500); //Sets all pumps inactive
-//pumps.data.StartPump(40);
-//pumps.data.StopPump(40);
-//console.log(pumps)
-//pumps.data.Test(5000);
-//pumps.data.End(); 
 
 client.on('connect', function () {
   console.log('Connected to :' + server)
@@ -184,28 +179,25 @@ function switchPlants(message) {
 
         default:
         if(NrOfPlants < 1){
-            console.log('we now have the following plants on list:');
-            try 
-            {
-                //PlantList.forEach(showPlant());    
-                for(plant in PlantList)
-                {
-                    console.log(PlantList[plant]);
-                }
-                } 
-            catch (error) 
-                {
-                LogError(error);
-                }
-            }
-            else
-            {
-                console.log('we dont have plants on the list:');
-            }
-    }
-    
-    
-    
+//            console.log('we now have the following plants on list:');
+//            try 
+//            {
+//                //PlantList.forEach(showPlant());    
+//                for(plant in PlantList)
+//                {
+//                    console.log(PlantList[plant]);
+//                }
+//                } 
+//            catch (error) 
+//                {
+//               LogError(error);
+//                }
+//            }
+//            else
+//            {
+//                console.log('we dont have plants on the list:');
+//            }
+//    }
 }
 
 function LogError(error) {
