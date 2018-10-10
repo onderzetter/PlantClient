@@ -1,13 +1,13 @@
 {
   "name": "PlantClient",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Waters the plants",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "author": "me",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "mqtt": "^2.18.6",
     "rpi-gpio": "^1.0.0"
