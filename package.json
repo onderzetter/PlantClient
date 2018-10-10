@@ -6,7 +6,7 @@
   "scripts": {
     "test": "test"
   },
-  "author": "me",
+  "author": "onderzetter",
   "license": "MIT",
   "dependencies": {
     "mqtt": "^2.18.6",
